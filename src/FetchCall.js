@@ -18,16 +18,16 @@ export default function FetchCall() {
         console.log(jokes);
         // console.log(jokes[0].results[0].joke)
       })
-  }, [])
+  }, [null])
 
 
   return (
     <div>
       <ul>
         {
-          // jokes[0].results.map((joke)=> (
-          //  <li>{joke.joke}</li>
-          // ))
+          jokes.map((joke)=> (
+           <li key={joke.id}>{joke.joke}</li>
+          ))
         }
       </ul>
     </div>
