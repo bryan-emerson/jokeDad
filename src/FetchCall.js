@@ -15,10 +15,9 @@ export default function FetchCall() {
         console.log(data.results);
         setJokes(data.results);
         // jokes.push(data);
-        console.log(jokes);
-        // console.log(jokes[0].results[0].joke)
+        //console.log(jokes);
       })
-  }, [null])
+  }, [])
 
 
   return (
