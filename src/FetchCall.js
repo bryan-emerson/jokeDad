@@ -12,21 +12,22 @@ export default function FetchCall() {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
-        jokes.push(data);
+        console.log(data.results);
+        setJokes(data.results);
+        // jokes.push(data);
         console.log(jokes);
-        console.log(jokes[0].results[0].joke)
+        // console.log(jokes[0].results[0].joke)
       })
-  })
+  }, [])
 
 
   return (
     <div>
       <ul>
         {
-          jokes[0].results.map((joke)=> (
-            <li>{joke.joke}</li>
-          ))
+          // jokes[0].results.map((joke)=> (
+          //  <li>{joke.joke}</li>
+          // ))
         }
       </ul>
     </div>
