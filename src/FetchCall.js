@@ -8,23 +8,22 @@ export default function FetchCall() {
 
   const handleChange = (e) => {
     e.preventDefault();
-    console.log(searchTerm);
+    //console.log(searchTerm);
     setSearchTerm(e.target.value)
   }
 
   useEffect(() => {
     //console.log(searchTerm)
     const url = `https://icanhazdadjoke.com/search?term=${searchTerm}`
-    console.log(url)
+    //console.log(url)
 
     fetch(url, {
       headers: { "Accept": "application/json" }
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data.results);
+        //console.log(data.results);
         setJokes(data.results);
-        // jokes.push(data);
         //console.log(jokes);
       })
   }, [searchTerm])
