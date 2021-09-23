@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Example from './Modal.js';
 
 
 export default function FetchCall() {
@@ -22,7 +23,7 @@ export default function FetchCall() {
     })
       .then(response => response.json())
       .then(data => {
-        //console.log(data.results);
+        console.log(data.results);
         setJokes(data.results);
         //console.log(jokes);
       })
@@ -42,6 +43,7 @@ export default function FetchCall() {
         {
           jokes.map((joke) => (
             <li key={joke.id}>{joke.joke}</li>
+
           ))
         }
       </ul>
