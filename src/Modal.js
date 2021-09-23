@@ -11,6 +11,7 @@ function Example() {
 
   return (
     <>
+    {/* import jokes array data from fetch call/ useState somehow (redux?)*/}
       <Button variant="primary" onClick={handleShow}>
         jokes
       </Button>
