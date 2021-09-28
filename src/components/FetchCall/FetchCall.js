@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Example from './Modal.js';
+import "./style.css";
 
 
 export default function FetchCall() {
@@ -39,14 +39,16 @@ export default function FetchCall() {
             onChange={handleChange} />
         </label>
       </form>
-      <ul>
+      <div>
         {
           jokes.map((joke) => (
-            <li key={joke.id}>{joke.joke}</li>
+            <div>
 
+              <p className="joke" key={joke.id}>{joke.joke}</p>
+            </div>
           ))
         }
-      </ul>
+      </div>
     </div>
   )
 }

@@ -1,16 +1,13 @@
 import './App.css';
-import FetchCall from './FetchCall.js';
+import FetchCall from './components/FetchCall/FetchCall.js';
+import Header from './components/Header/Header.js';
 
 function App() {
 
   return (
     <div className="App">
-      <p>what the hecc is good fammm</p>
-      <ul>
-        {
-          <FetchCall />
-        }
-      </ul>
+      <Header />
+      <FetchCall />
     </div>
   );
 }
