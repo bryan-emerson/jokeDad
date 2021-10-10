@@ -1,9 +1,10 @@
+import Line from '../Line/Line.js'
 import './style.css'
 
 export default function Header() {
   return(
     <div className='header'>
-      <h1>Dad jokes for YOU!</h1>
+      <h1>Dad Jokes 2.0!</h1>
     </div>
   )
 }
