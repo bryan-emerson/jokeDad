@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import Container from 'react-bootstrap/Container';
+import DadSearch from '../DadSearch/DadSearch.js';
 import "./style.css";
 
 
@@ -29,25 +31,21 @@ export default function FetchCall() {
       })
   }, [searchTerm])
 
+  let allJokes = jokes.map((joke) => (
+    <div>
+      <ul>
+      <li className="joke" key={joke.id}>{joke.joke}</li>
+      </ul>
+    </div>
+  ))
 
   return (
     <div>
-      <form >
-        <label>
-          Search Dad Jokes:
-          <input type="text" value={searchTerm} required
-            onChange={handleChange} />
-        </label>
-      </form>
+      <DadSearch handle={handleChange}/>
       <div>
-        {
-          jokes.map((joke) => (
-            <div>
-
-              <p className="joke" key={joke.id}>{joke.joke}</p>
-            </div>
-          ))
-        }
+        <Container>
+          {allJokes}
+        </Container>
       </div>
     </div>
   )
