@@ -1,4 +1,3 @@
-import Line from '../Line/Line.js'
 import './style.css'
 
 export default function Header() {
